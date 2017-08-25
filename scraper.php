@@ -34,11 +34,11 @@ for($id = 1; $id <= 2; $id++)
 	{
 	 $url = ("http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=".$id);
 	$link2 = file_get_html($url);
-	$RowNumb	=	-1;
-	if ($Html) {
+	
+	if ($link2) {
 
 			//	Paginate all 'View' buttons
-			foreach ($Html->find("//*[@id='w0']/table/tbody") as $element) {
+			foreach ($link2->find("//*[@id='w0']/table/tbody") as $element) {
 				echo $element;
 			}
 		
