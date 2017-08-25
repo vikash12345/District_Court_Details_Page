@@ -39,14 +39,7 @@ for($id = 1; $id <= 2; $id++)
 
 			//	Paginate all 'View' buttons
 			foreach ($Html->find("//*[@id='w0']/table/tr") as $element) {
-				$RowNumb	+=	1;
-				if ($RowNumb != 0) {
-					$CourtName	=	$element->find('./td[2]', 0);
-					$CaseNumbr	=	$element->find('./td[3]', 0);
-					$CaseStats	=	$element->find('./td[4]', 0);
-					echo $CaseValue	=	$element->find('./td[5]/button', 0);
-					 $CaseLinkR	=	$BaseLink . $CaseValue->attr['value'];
-					}
+				echo $element;
 			}
 		
 	}
