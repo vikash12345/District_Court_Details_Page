@@ -60,7 +60,7 @@ for($id = 1; $id <= 2; $id++)
 						$RestrCode	=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 3)->plaintext;
 						$USCode		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 3)->plaintext;
 						$AdvPSide1	=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 4)->plaintext;
-						$AdvPSide2	=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4)->plaintext;
+						echo $AdvPSide2	=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4)->plaintext;
 					}}}}}
 				
 	
