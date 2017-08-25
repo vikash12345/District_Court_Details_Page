@@ -38,7 +38,7 @@ for($id = 1; $id <= 2; $id++)
 	if ($Html) {
 
 			//	Paginate all 'View' buttons
-			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'class='table table-striped table-bordered')]/tbody/tr") as $element) {
+			foreach ($Html->find("//*[@id='w0']/table/tr") as $element) {
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
 					$CourtName	=	$element->find('./td[2]', 0);
