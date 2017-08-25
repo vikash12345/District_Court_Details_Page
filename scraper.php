@@ -38,7 +38,7 @@ for($id = 1; $id <= 2; $id++)
 	if ($Html) {
 
 			//	Paginate all 'View' buttons
-			foreach ($Html->find("//*[@id='w0']/table/tr") as $element) {
+			foreach ($Html->find("//*[@id='w0']/table/tbody") as $element) {
 				echo $element;
 			}
 		
