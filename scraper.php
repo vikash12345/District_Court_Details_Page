@@ -63,5 +63,5 @@ for($id = 1; $id <= 2; $id++)
 						$AdvPSide2	=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 4)->plaintext;
 					}}}}}
 				
-	}
+	
 ?>
