@@ -54,7 +54,7 @@
 						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
 						 $pagetext 		= $DetailPg->plaintext;
 				
-					/*	scraperwiki::save_sqlite(array('name'), array('CaseNumbr' => $CaseNumbr, 
+						scraperwiki::save_sqlite(array('name'), array('CaseNumbr' => $CaseNumbr, 
 											      'CourtName' => $CourtName, 
 											      'CaseStats' => $CaseStats, 
 											      'CaseValue' => $CaseValue, 
@@ -83,10 +83,7 @@
 												'pagetext' => $pagetext,
 												'Mainpageurl' => $FinalURL));
 												
-												*/
-						
-						$message = scraperwiki::save_sqlite(array("a"), array("a"=>2, "bbb"=>"Going home", "cccnew"=>-999.9));           
-echo ($message); 
+												
 
 
 				
