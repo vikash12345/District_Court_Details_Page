@@ -54,7 +54,7 @@ for($id = 0; $id <= 2; $id++)
 						 $FIRDesc 		= 	$link2->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
 						 $pagetext 		= $link2->plaintext;
 				
-						scraperwiki::save_sqlite(array('CaseNumbr'), array('CaseNumbr' => $CaseNumbr , 
+						scraperwiki::save_sqlite(array('CaseNumbr'), array('CaseNumbr' => $CaseNumbr, 
 											      'CourtName' => $CourtName, 
 											      'CaseStats' => $CaseStats, 
 											      'CaseValue' => $CaseValue, 
