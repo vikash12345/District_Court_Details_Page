@@ -54,7 +54,7 @@
 						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
 						 $pagetext 		= $DetailPg->plaintext;
 				
-						scraperwiki::save_sqlite(array('CaseNumbr'), array('CaseNumbr' => $CaseNumbr, 
+						scraperwiki::save_sqlite(array('CaseValue'), array('CaseValue' => $CaseNumbr, 
 											      'CourtName' => $CourtName, 
 											      'CaseStats' => $CaseStats, 
 											      'CaseValue' => $CaseValue, 
