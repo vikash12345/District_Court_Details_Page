@@ -26,7 +26,7 @@ for($id = 0; $id <= 0; $id++)
 					
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($CaseLink);
-					if ($DetailPg) {
+					if ($DetailPg != 'http://202.61.43.40:8080/') {
 						
 						//	Assign fields to varilables
 						//This is for Case Details
