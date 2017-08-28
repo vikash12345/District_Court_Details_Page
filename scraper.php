@@ -25,9 +25,9 @@ for($id = 0; $id <= 0; $id++)
 					
 					
 					//	Visit link inside 'View' button
-					$DetailPg	=	file_get_html($CaseLink);
-					if ($DetailPg != $BaseLink) {
-						
+					
+					if ($CaseLinkR != $BaseLink) {
+						$DetailPg	=	file_get_html($CaseLink);
 						//	Assign fields to varilables
 						//This is for Case Details
 						 $CaseNo		=	$link2->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
