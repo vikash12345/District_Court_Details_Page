@@ -53,8 +53,7 @@ for($id = 0; $id <= 2; $id++)
 						 $ChallanDetail =   $link2->find("//div[@class='container']/table[2]/tbody/tr[4]/td", 0)->plaintext;
 						 $FIRDesc 		= 	$link2->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
 						 $pagetext 		= $link2->plaintext;
-						 
-				if($CaseNo){
+				
 						scraperwiki::save_sqlite(array('CaseNumbr'), array('CaseNumbr' => $CaseNumbr , 
 											      'CourtName' => $CourtName, 
 											      'CaseStats' => $CaseStats, 
@@ -85,6 +84,6 @@ for($id = 0; $id <= 2; $id++)
 												'Mainpageurl' => $url));
 
 
-				}
+				
 	}}}}}
 ?>
