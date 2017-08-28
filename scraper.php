@@ -16,8 +16,8 @@ for($id = 0; $id <= 2; $id++)
 			foreach ($link2->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
-					$CourtName	=	$element->find('./td[2]', 0);
 					$CaseNumbr	=	$element->find('./td[3]', 0);
+					$CourtName	=	$element->find('./td[2]', 0);
 					$CaseStats	=	$element->find('./td[4]', 0);
 					$CaseValue	=	$element->find('./td[5]/button', 0);
 					$CaseLinkR	=	$BaseLink . $CaseValue->attr['value'];
@@ -54,6 +54,37 @@ for($id = 0; $id <= 2; $id++)
 						 $FIRDesc 		= 	$link2->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
 						 $pagetext 		= $link2->plaintext;
 						 
-				
+				if($CaseNo){
+						scraperwiki::save_sqlite(array('CaseNumbr'), array('CaseNumbr' => $CaseNumbr , 
+											      'CourtName' => $CourtName, 
+											      'CaseStats' => $CaseStats, 
+											      'CaseValue' => $CaseValue, 
+											      'CaseLinkR' => $CaseLinkR, 
+											      'CaseLink' => $CaseLink, 
+												   //This is for Inner Page
+											      'CaseNo' => $CaseNo, 
+											      'InstDte' => $InstDte, 
+											      'InstDte1st' => $InstDte1st, 
+											      'Status' => $Status, 
+											      'CourtName' => $CourtName, 
+											      'CaseFlDte' => $CaseFlDte, 
+											      'RestrCode' => $RestrCode, 
+											      	'USCode' => $USCode, 
+											      	'AdvPSide1' => $AdvPSide1, 
+												'AdvPSide2' => $AdvPSide2, 
+												'Partyside1' => $Partyside1, 
+												'FIR' => $FIR, 
+												'FIRReg' => $FIRReg, 
+												'Offence' => $Offence, 
+												'IncidentDate' => $IncidentDate, 
+												'CaseProperty' => $CaseProperty,
+												'NameofIO' => $NameofIO,
+												'ChallanDetail' => $ChallanDetail,
+												'FIRDesc' => $FIRDesc,
+												'pagetext' => $pagetext,
+												'Mainpageurl' => $url));
+
+
+				}
 	}}}}}
 ?>
