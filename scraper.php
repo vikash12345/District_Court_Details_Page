@@ -23,7 +23,7 @@ for($id = 0; $id <= 2; $id++)
 					$CaseLinkR	=	$BaseLink . $CaseValue->attr['value'];
 					echo $CaseLink	=	str_replace("amp;", "", $CaseLinkR);
 					
-					if($CaseLink != null AND $CaseLink == 'http://202.61.43.40:8080')
+					if($CaseLink != null AND $CaseLink == 'http://202.61.43.40:8080/')
 					{
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($CaseLink);
