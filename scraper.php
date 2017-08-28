@@ -21,7 +21,7 @@ for($id = 0; $id <= 0; $id++)
 					$CaseStats	=	$element->find('./td[4]', 0);
 					$CaseValue	=	$element->find('./td[5]/button', 0);
 					$CaseLinkR	=	$BaseLink . $CaseValue->attr['value'];
-					echo $CaseLink	=	str_replace("amp;", "", $CaseLinkR);
+					$CaseLink	=	str_replace("amp;", "", $CaseLinkR);
 					
 					
 					//	Visit link inside 'View' button
@@ -34,7 +34,7 @@ for($id = 0; $id <= 0; $id++)
 						 $InstDte		=	$link2->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
 						 $InstDte1st	=	$link2->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
 						 $Status		=	$link2->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 1)->plaintext;
-						 $CourtName		=	$link2->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 2)->plaintext;
+						echo $CourtName		=	$link2->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 2)->plaintext;
 						 $CaseFlDte		=	$link2->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 2)->plaintext;
 						 $RestrCode		=	$link2->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 3)->plaintext;
 						 $USCode		=	$link2->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 3)->plaintext;
