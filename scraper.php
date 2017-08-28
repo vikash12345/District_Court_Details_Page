@@ -60,28 +60,7 @@
 											      'CaseValue' => $CaseValue, 
 											      'CaseLinkR' => $CaseLinkR, 
 											      'CaseLink' => $CaseLink, 
-												   //This is for Inner Page
-											      'CaseNo' => $CaseNo, 
-											      'InstDte' => $InstDte, 
-											      'InstDte1st' => $InstDte1st, 
-											      'Status' => $Status, 
-											      'CourtName' => $CourtName, 
-											      'CaseFlDte' => $CaseFlDte, 
-											      'RestrCode' => $RestrCode, 
-											      	'USCode' => $USCode, 
-											      	'AdvPSide1' => $AdvPSide1, 
-												'AdvPSide2' => $AdvPSide2, 
-												'Partyside1' => $Partyside1, 
-												'FIR' => $FIR, 
-												'FIRReg' => $FIRReg, 
-												'Offence' => $Offence, 
-												'IncidentDate' => $IncidentDate, 
-												'CaseProperty' => $CaseProperty,
-												'NameofIO' => $NameofIO,
-												'ChallanDetail' => $ChallanDetail,
-												'FIRDesc' => $FIRDesc,
-												'pagetext' => $pagetext,
-												'Mainpageurl' => $FinalURL));
+											      'Mainpageurl' => $FinalURL));
 
 
 				
