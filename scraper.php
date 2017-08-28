@@ -81,7 +81,7 @@
 												'ChallanDetail' => $ChallanDetail,
 												'FIRDesc' => $FIRDesc,
 												'pagetext' => $pagetext,
-												'Mainpageurl' => $url));
+												'Mainpageurl' => $FinalURL));
 
 
 				
