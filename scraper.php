@@ -6,7 +6,7 @@
 	$RowNumb;
 //
 /** looping over list of ids of doctors **/
-for($id = 0; $id <= 2; $id++)
+for($id = 0; $id <= 0; $id++)
 	{
 	$url = ("http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=".$id);
 	$link2 = file_get_html($url);
