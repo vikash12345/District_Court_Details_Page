@@ -53,7 +53,7 @@
 						 $ChallanDetail =   $DetailPg->find("//div[@class='container']/table[2]/tbody/tr[4]/td", 0)->plaintext;
 						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
 						 $pagetext 		= $DetailPg->plaintext;
-				if($CaseNumbr != null OR $CaseNumbr != "" OR $CaseNumbr != "invalid"){
+				if($CaseNumbr != null){
 						scraperwiki::save_sqlite(array('Casenumbr'), array('Casenumbr' => $CaseNumbr, 
 											      'CourtName' => $CourtName, 
 											      'CaseStats' => $CaseStats, 
