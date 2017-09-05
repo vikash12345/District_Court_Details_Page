@@ -53,7 +53,7 @@
 						 $ChallanDetail =   $DetailPg->find("//div[@class='container']/table[2]/tbody/tr[4]/td", 0)->plaintext;
 						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
 						 $pagetext 		= $DetailPg->plaintext;
-				scraperwiki::save_sqlite(array('Caseno'), array('Caseno' => $CaseNo, 
+				scraperwiki::save_sqlite(array('CaseNo'), array('CaseNo' => $CaseNo, 
 											      'InstDte' => $InstDte, 
 											      'Status' => $Status, 
 											      ));
