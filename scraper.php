@@ -25,12 +25,11 @@
 					$CaseLinkR	=	$BaseLink . $CaseValue->attr['value'];
 					$CaseLink	=	str_replace("amp;", "", $CaseLinkR);
 					
-					if($CourtName != null){
+					
 					scraperwiki::save_sqlite(array('name'), array('name' => $info['CaseNumbr'], 
 											      'Courtname' => $info['CourtName'], 
 											      'Status' =>$info['CaseStats']
 											      ));
-					}
 					
 					
 					/*
