@@ -31,7 +31,7 @@ scraperwiki::save_sqlite(array('name'), array('name' => $CaseNumbr,
 					
 					
 					
-					
+					/*
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($CaseLink);
 
@@ -68,7 +68,7 @@ scraperwiki::save_sqlite(array('name'), array('name' => $CaseNumbr,
 				
 						
 							
-						}
+						} */
 
 				}
 				
