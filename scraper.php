@@ -55,7 +55,7 @@
 						 $DetailPg;
 						
 scraperwiki::save_sqlite(array('name'), array('name' => $CaseNo , 'InstDte' => $InstDte, 'InstDte1st' => $InstDte1st));
-	
+	$DetailPg->clear();
 					}
 				}
 			}
