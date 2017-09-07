@@ -18,7 +18,7 @@
 			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
-					$CourtName	=	$element->find('./td[2]', 0);
+					echo $CourtName	=	$element->find('./td[2]', 0);
 					$CaseNumbr	=	$element->find('./td[3]', 0);
 					$CaseStats	=	$element->find('./td[4]', 0);
 					$CaseValue	=	$element->find('./td[5]/button', 0);
