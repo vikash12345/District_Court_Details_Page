@@ -28,7 +28,7 @@
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($CaseLink);
 
-					
+					if ($DetailPg) {
 						//	Assign fields to varilables
 						 $CaseNo		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
 						 $InstDte		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
@@ -61,7 +61,7 @@
 							
 						}
 
-
+				}
 				
 	}}}
 
