@@ -54,10 +54,10 @@
 						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
 						 $DetailPg;
 						
-scraperwiki::save_sqlite(array('name'), array('name' => $info['CaseNo'] , 'InstDte' => $info['InstDte'], 'InstDte1st' => $info['InstDte1st']));
 			
 						
-					}
+					}scraperwiki::save_sqlite(array('name'), array('name' => $info['CaseNo'] , 'InstDte' => $info['InstDte'], 'InstDte1st' => $info['InstDte1st']));
+
 				}
 			}
 		}
