@@ -55,8 +55,12 @@
 						 $DetailPg;
 						
 			
-						
-					}scraperwiki::save_sqlite(array('name'), array('name' => $info['CaseNo'] , 'InstDte' => $info['InstDte'], 'InstDte1st' => $info['InstDte1st']));
+						if($info['CaseNo']){
+											scraperwiki::save_sqlite(array('name'), array('name' => $info['CaseNo'] , 'InstDte' => $info['InstDte'], 'InstDte1st' => $info['InstDte1st']));
+
+						}
+					}
+					
 
 				}
 			}
