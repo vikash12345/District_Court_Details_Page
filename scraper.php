@@ -10,11 +10,7 @@
 
 		$FinalURL	=	$SiteURL . $PageLoop;
 		$Html		=	file_get_html($FinalURL);
-		$RowNumb	=	-1;
-
-		if ($Html) {
-
-			//	Paginate all 'View' buttons
+//Paginate all 'View' buttons
 			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 				if($element) {
 					echo $CourtName	=	$element->find('./td[2]', 0)->plaintext;
