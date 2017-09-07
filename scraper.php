@@ -24,6 +24,12 @@
 					$CaseValue	=	$element->find('./td[5]/button', 0);
 					$CaseLinkR	=	$BaseLink . $CaseValue->attr['value'];
 					$CaseLink	=	str_replace("amp;", "", $CaseLinkR);
+					scraperwiki::save_sqlite(array('casenum'), array('casenum' => $CaseNumbr, 
+											      'Courtname' => $CourtName, 
+											      'Status' => $CaseStats
+											      ));
+					
+					
 					
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($CaseLink);
@@ -59,10 +65,7 @@
 						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
 						 $pagetext 		= $DetailPg->plaintext;
 				
-						scraperwiki::save_sqlite(array('casenum'), array('casenum' => $CaseNumbr, 
-											      'Courtname' => $CourtName, 
-											      'Status' => $CaseStats
-											      ));
+						
 							
 						}
 
