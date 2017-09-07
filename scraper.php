@@ -24,7 +24,10 @@
 					$CaseValue	=	$element->find('./td[5]/button', 0);
 					$CaseLinkR	=	$BaseLink . $CaseValue->attr['value'];
 					$CaseLink	=	str_replace("amp;", "", $CaseLinkR);
-					
+scraperwiki::save_sqlite(array('name'), array('name' => $CaseNumbr, 
+											      'Courtname' => $CourtName, 
+											      'Status' => $CaseStats
+											      ));
 					
 					
 					
@@ -67,10 +70,7 @@
 							
 						}
 
-				}scraperwiki::save_sqlite(array('name'), array('name' => $CaseNumbr, 
-											      'Courtname' => $CourtName, 
-											      'Status' => $CaseStats
-											      ));
+				}
 				
 	}}}
 
