@@ -28,7 +28,7 @@
 					//	Visit link inside 'View' button
 					$DetailPg	=	file_get_html($CaseLink);
 
-					if ($DetailPg) {
+					
 						//	Assign fields to varilables
 						 $info['CaseNo']		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
 						 $info['InstDte']		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
@@ -54,7 +54,6 @@
 						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
 						 $pagetext 		= $DetailPg->plaintext;
 				
-						if($info['CaseNo']){
 						scraperwiki::save_sqlite(array('name'), array('name' => $info['CaseNo'], 
 											      'InstDte' => $info['InstDte'], 
 											      'Status' => $info['Status']
@@ -64,6 +63,6 @@
 
 
 				
-	}}}}}
+	}}}
 
 ?>
