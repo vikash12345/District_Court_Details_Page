@@ -27,7 +27,6 @@
 											      ));
 						
 					
-				}
 					
 					/*
 					//	Visit link inside 'View' button
