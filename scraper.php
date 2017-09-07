@@ -30,10 +30,10 @@
 
 					
 						//	Assign fields to varilables
-						 $info['CaseNo']		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
-						 $info['InstDte']		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
+						 $CaseNo		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
+						 $InstDte		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
 						 $InstDte1st	=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
-						 $info['Status']		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 1)->plaintext;
+						 $Status		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 1)->plaintext;
 						 $CourtName		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 2)->plaintext;
 						 $CaseFlDte		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 2)->plaintext;
 						 $RestrCode		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 3)->plaintext;
@@ -54,9 +54,9 @@
 						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
 						 $pagetext 		= $DetailPg->plaintext;
 				
-						scraperwiki::save_sqlite(array('name'), array('name' => $info['CaseNo'], 
-											      'InstDte' => $info['InstDte'], 
-											      'Status' => $info['Status']
+						scraperwiki::save_sqlite(array('name'), array('name' => $CaseNo, 
+											      'InstDte' => $InstDte, 
+											      'Status' => $Status
 											      ));
 							
 						}
