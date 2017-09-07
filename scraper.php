@@ -17,17 +17,17 @@
 			//	Paginate all 'View' buttons
 			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 				
-					$info['CourtName']	=	$element->find('./td[2]', 0)->plaintext;
-					$info['CaseNumbr']	=	$element->find('./td[3]', 0)->plaintext;
-					$info['CaseStats']	=	$element->find('./td[4]', 0)->plaintext;
+					echo $CourtName	=	$element->find('./td[2]', 0)->plaintext;
+					$CaseNumbr	=	$element->find('./td[3]', 0)->plaintext;
+					$CaseStats	=	$element->find('./td[4]', 0)->plaintext;
 					$CaseValue	=	$element->find('./td[5]/button', 0);
 					$CaseLinkR	=	$BaseLink . $CaseValue->attr['value'];
 					$CaseLink	=	str_replace("amp;", "", $CaseLinkR);
 					
 					
-					scraperwiki::save_sqlite(array('name'), array('name' => $info['CaseNumbr'], 
-											      'Courtname' => $info['CourtName'], 
-											      'Status' =>$info['CaseStats']
+					scraperwiki::save_sqlite(array('name'), array('name' => $CaseNumbr, 
+											      'Courtname' => $CourtName, 
+											      'Status' =>$CaseStats
 											      ));
 					
 					
