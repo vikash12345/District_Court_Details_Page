@@ -10,12 +10,14 @@
 
 		$FinalURL	=	$SiteURL . $PageLoop;
 		$Html		=	file_get_html($FinalURL);
-		
+		$RowNumb	=	-1;
 
 		if ($Html) {
 
 			//	Paginate all 'View' buttons
 			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
+				$RowNumb	+=	1;
+				if ($RowNumb != 0) {
 				
 					echo $CourtName	=	$element->find('./td[2]', 0)->plaintext;
 					$CaseNumbr	=	$element->find('./td[3]', 0)->plaintext;
@@ -29,7 +31,7 @@
 											      'Courtname' => $CourtName, 
 											      'Status' =>$CaseStats
 											      ));
-					
+				}
 					
 					/*
 					//	Visit link inside 'View' button
