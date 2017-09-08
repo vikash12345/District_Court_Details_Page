@@ -54,7 +54,7 @@
 						 $ChallanDetail =   $DetailPg->find("//div[@class='container']/table[2]/tbody/tr[4]/td", 0)->plaintext;
 						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;
 
-						
+						if($RowNumb){
 	scraperwiki::save_sqlite(array('number','number'), 
     array('number' => $number, 
 	  
@@ -63,7 +63,7 @@
 	  
 	   ));
 						
-						
+						}				
 					}
 
 				}
