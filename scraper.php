@@ -18,8 +18,7 @@
 			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
-					echo $number	=	$element->find('./td[1]', 0)->plaintext;
-					echo "----------------";
+					$number	=	$element->find('./td[1]', 0)->plaintext;
 					$CourtName	=	$element->find('./td[2]', 0);
 					$CaseNumbr	=	$element->find('./td[3]', 0);
 					$CaseStats	=	$element->find('./td[4]', 0);
@@ -56,9 +55,9 @@
 						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;
 
 						
-					}										//	scraperwiki::save_sqlite(array('name'), array('name' => $CaseNo , 'InstDte' => $InstDte, 'InstDte1st' => $InstDte1st));
+	scraperwiki::save_sqlite(array('name'), array('name' => $number , 'InstDte' => $InstDte, 'InstDte1st' => $InstDte1st));
 
-					
+					}
 
 				}
 			}
