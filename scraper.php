@@ -51,14 +51,10 @@
 						 $CaseProperty	=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[3]/td[1]", 0)->plaintext;
 						 $NameofIO		=	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[3]/td[2]", 0)->plaintext;
 						 $ChallanDetail =   $DetailPg->find("//div[@class='container']/table[2]/tbody/tr[4]/td", 0)->plaintext;
-						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;	
-						
-						
-			
-						if($info['CaseNo']){
-											scraperwiki::save_sqlite(array('name'), array('name' => $info['CaseNo'] , 'InstDte' => $info['InstDte'], 'InstDte1st' => $info['InstDte1st']));
+						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;
+											scraperwiki::save_sqlite(array('name'), array('name' => $CaseNo , 'InstDte' => $InstDte, 'InstDte1st' => $InstDte1st));
 
-						}
+						
 					}
 					
 
