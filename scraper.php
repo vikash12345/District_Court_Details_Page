@@ -19,7 +19,8 @@
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
 					$CourtName	=	$element->find('./td[2]', 0);
-					$CaseNumbr	=	$element->find('./td[3]', 0);
+					echo $CaseNumbr	=	$element->find('./td[3]', 0);
+					echo "---------------------------------";
 					$CaseStats	=	$element->find('./td[4]', 0);
 					$CaseValue	=	$element->find('./td[5]/button', 0);
 					$CaseLinkR	=	$BaseLink . $CaseValue->attr['value'];
@@ -31,10 +32,7 @@
 					if ($DetailPg) {
 						//	Assign fields to varilables
 						 $CaseNo		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 0)->plaintext;
-						echo  $CaseNo;
-						echo "----------------------------------------------------------";
-						
-						$InstDte		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
+						 $InstDte		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 0)->plaintext;
 						 $InstDte1st		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 1)->plaintext;
 						 $Status		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[2]", 1)->plaintext;
 						 $CourtName		=	$DetailPg->find("//div[@class='container']/table[1]/tbody/tr/td[1]", 2)->plaintext;
@@ -57,7 +55,7 @@
 						 $FIRDesc 		= 	$DetailPg->find("//div[@class='container']/table[2]/tbody/tr[5]/td", 0)->plaintext;
 
 						
-					}											scraperwiki::save_sqlite(array('name'), array('name' => $CaseNo , 'InstDte' => $InstDte, 'InstDte1st' => $InstDte1st));
+					}										//	scraperwiki::save_sqlite(array('name'), array('name' => $CaseNo , 'InstDte' => $InstDte, 'InstDte1st' => $InstDte1st));
 
 					
 
