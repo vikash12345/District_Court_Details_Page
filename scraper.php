@@ -58,8 +58,8 @@
 	scraperwiki::save_sqlite(array('number','number'), 
     array('number' => $number, 
 	  
-          'InstDte' => (trim($info['InstDte'])), 
-          'InstDte1st' => (trim($info['InstDte1st']))
+          'InstDte' => $info['InstDte'], 
+          'InstDte1st' => $info['InstDte1st']
 	  
 	   ));
 						
