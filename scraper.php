@@ -6,7 +6,7 @@
 	$SiteURL	=	'http://202.61.43.40:8080/index.php?r=site%2Fsearchbyvalue&page=';
 	
 	//	Page pagination
-	for($PageLoop = 1; $PageLoop < 2; $PageLoop++){
+	for($PageLoop = 0; $PageLoop < 1; $PageLoop++){
 
 		$FinalURL	=	$SiteURL . $PageLoop;
 		$Html		=	file_get_html($FinalURL);
@@ -18,7 +18,7 @@
 			foreach ($Html->find("//div[@id='w0']/table[contains(@class,'table-striped')]/tbody/tr") as $element) {
 				$RowNumb	+=	1;
 				if ($RowNumb != 0) {
-					echo $number	=	$element->find('./td[1]', 0);
+					echo $number	=	$element->find('./td[1]', 0)->plaintext;
 					echo "----------------";
 					$CourtName	=	$element->find('./td[2]', 0);
 					$CaseNumbr	=	$element->find('./td[3]', 0);
